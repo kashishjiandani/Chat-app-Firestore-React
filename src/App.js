@@ -85,8 +85,11 @@ function App() {
                   display: "none",
                 },
               }}>
+                <Message text={"Hello! My name is Kashish Jiandani and this is a chat app I made using React.Js and FIrestore.Hope you enjoy it!💗"} user={"me"} />
         {msgs.map((item)=>(
+          <>
         <Message key={item.id} text={item.text} uri={item.uri} user={item.uid===user.uid?"me":"other"} />
+          </>
         ))}
         <div ref={divForScroll}></div>
         </VStack>
