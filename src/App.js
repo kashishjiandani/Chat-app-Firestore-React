@@ -59,7 +59,11 @@ function App() {
     e.preventDefault();
     
     try {
-      console.log(user.uid,user.photoURL)
+      let spaces = msg.split(" ").join("");
+      if(spaces.length===0){
+        return;
+      }
+      // console.log(user.uid,user.photoURL)
       await addDoc(collection(db,"Messages"),{
         text:msg,
         uid:user.uid,
